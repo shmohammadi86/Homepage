@@ -1,5 +1,5 @@
 h1 {
-	margin:0 0 14 0;
+	padding: 0pt 0pt 0pt 0pt;
 }
 
 p {
@@ -151,7 +151,7 @@ td {
 
 #content {
     float:left;
-    width:87%;
+    width:80%;
     padding:1%;     
 	overflow:auto;
 	height:70%;	
@@ -164,18 +164,18 @@ td {
 
 #navigator {
 	float: left;
-    width:10%;
+    width:15%;
 	margin: 0;
-	padding: 0px;
+    padding: 0;
     line-height:30px;
     background-color:#eeeeee;
+	font-size:18pt;
 }
 
 #navigator ul {
     list-style-type: none;
-    margin: 10pt 0;	
-    padding: 0;
-	font-size:18pt;
+    margin: 0pt 0;	
+	padding: 0;
 }
 
 #navigator a:link, #navigator a:visited {
@@ -190,15 +190,26 @@ td {
     text-decoration: none;
     text-transform: uppercase;
 	*/
-	display:block;
+/*	display:block;
     text-align: left;	
 	margin: 0;
 	padding:5px 18px 5px 0;
 	color:#606060;
 	background:#e0e0e0;
-	font-weight:normal;
+	font-weight:bold;
+	text-decoration:none;
+    text-transform: uppercase; */
+    
+	display:block;
+    text-align: left;	
+	color:#606060;
+	background:#e0e0e0;
+	font-weight:bold;
 	text-decoration:none;
     text-transform: uppercase; 
+    border-bottom: 1px solid #fff;
+	margin: 0;
+	padding: 3px 12px 3px 8px;
 }
 
 #navigator a:hover {
@@ -207,13 +218,27 @@ td {
 }
 
 #navigator a.active {
-	padding:5px 18px 5px 0;
 	background:#f9f9f9;
 	border-top:2px solid #c0c0c0;
-	border-bottom:2px solid #c0c0c0;	
+	border-bottom:2px solid #c0c0c0;
 }
 
 #navigator a.active:hover {
 	color:#505050;
 	background:#fafafa;	
 }
+
+    
+#navigator li li a:link {
+	display:block;
+    text-align: left;	
+	color:#606060;
+	background:#e0e0e0;
+	font-weight:normal;
+	text-decoration:none;
+    text-transform: uppercase; 
+    border-bottom: 1px solid #fff;
+	margin: 0;
+	padding: 3px 3px 3px 24px;
+}
+

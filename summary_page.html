@@ -13,8 +13,10 @@
 				</div>
 				<div id="affiliation">
 					<h1>Shahin Mohammadi</h1>
-					<p>Ph.D. Candidate</p>
-					<p>Computational Biologist</p>					
+					<p style="margin-bottom:14pt;">
+						Ph.D. Candidate</br>
+					    Computational Biologist
+					</p>				
 				</div>	
 				<div style="clear:both; display:block;"></div>						
 			</div> <!-- header -->
@@ -33,7 +35,52 @@
 			<div id="page">				
 				<div id="content">
 					<h1>Research Summary</h1>
-
+					<p>
+						My current research spans different areas of Bioinformatics/ Systems Biology and aims to develop computational methods coupled with statistical models for: 
+					</p>
+					<ol>
+						<li>
+							<b>Network motif detection</b></br>
+							<p>
+								Network motifs are recurring structures that repeat more frequently in real compared to random networks . As such, a better understanding of these functional sub-structures is a crucial step towards reverse-engineering complex networks. In the context of social networks, a notable example of such structure is a triangle motif: if two people have a common friend, there is a high probability of them being friends as well. In other words, friend of our friend is potentially a good friend for us! This basic idea of friendship transitivity has been used extensively in various social networks, such as LinkedIn or Facebook, to suggest new friends. The same principle re-occurs in undirected biological networks, such as protein-protein interaction networks as well. These triangle motifs are highly enriched in protein complexes, and many methods have been developed to utilize this observation to computationally reconstruct unknown protein complexes. Simple extensions of this basic motif to directed networks, such as gene regulatory networks, are feedforward and feedback loops. Functional implication of these sub-structures have been an active area of research and for specific motifs, have been linked to their role in processing signals in biological pathways.
+							</p>
+						</li>
+						<li><b>Comparative analysis of biological networks to project conserved pathways across species</b></br>
+							<p>
+								Graph structured data sets are commonly encountered in diverse domains, ranging from biochemical interaction networks, to networks of social and economic transactions. Effective analyses of these datasets hold the potential for significant applications’ insight. Given two graphs, an interesting question one may ask is: “how similar is the first graph to the other and how to optimally map them together?” The answer to this problem can help us to identify the underlying similarities and differences between networks, as well as to assess the overall similarity of input networks.
+							</p>
+						</li>
+						<li>
+							<b>Computational map of aging pathways: Uncovering downstream effectors of calorie restriction in yeast</b></br> 
+							<p>
+								Limiting caloric intake without causing malnutrition, also known as calorie restriction (CR), has been shown to extend lifespan in different model organisms and is believed to have similar effects in humans. Inhibition of the nutrient-sensing pathways, using either genetic or pharmacological intervention, also results in a similar phenotype. More importantly, the observed lifespan extension is accompanied by an increased healthspan, which delays both the progression and the increasing risk-factor for a wide range of age-related diseases, including cancers, cardiovascular disease, and multiple neurodegenerative disorders. The extent to which age-related pathologies share their underlying biology is a topic of active investigation. Emerging evidence, however, supports the hypothesis that large classes of age-related diseases are driven by similar underlying mechanisms. Understanding and controlling these mechanisms, therefore, constitute critical aspects of preventing or delaying the onset of age-related pathologies. An essential step towards this goal is the construction of a comprehensive map of aging pathways with the objective of deciphering key lifespan mediators, their crosstalk, and systems-level organization. Current knowledge of aging pathways is predominantly accrued from targeted experiments that sample limited regions of the combinatorial space of interactions. While these experiments are highly reliable, they lack the necessary coverage to reconstruct comprehensive maps of aging pathways. Furthermore, they do not have the tissue-specificity needed to precisely model aging in proliferating and post-mitotic cells. To address these critical issues, we aim to construct computationally derived maps of aging pathways to complement experimental approaches in aging-related studies. To achieve this goal, we have developed efficient methods, coupled with rigorous statistical models to integrate available -omics datasets, infer cellular aging-pathways in yeast, and project them on to different human tissues. Our methods predict novel downstream targets of CR which are suitable for further therapeutic interventions.
+							</p>
+						</li>
+						<li>
+							<b>Integrating high-throughput -omic datasets to reconstruct tissue/ cell-type specific interactomes</b></br>
+							<p>
+								Information flow-based method to identify most-informative active sub-network of the global interactome
+							</p>
+						</li>
+						<li>
+							<b>Scope and limitations of yeast as a model organism for studying human tissue-specific pathways</b></br>
+							<p>
+								Decades of accumulated knowledge and maturation of molecular biology toolbox in yeast have placed it on the frontier of research, and at the core of many high-throughput technologies. The use of yeast to assay protein-protein interaction, chemical-genetic links, and as an unbiased phenotypic assay to study the effect of different drugs on various disorders have provided us with wealth of knowledge in recent years. A notable example of such advancement is the recent identification of a new small molecule, N-aryl benzimidazole (NAB), using humanized yeast model of Parkinson’s disease, which strongly protects cells from alpha-synuclein toxicity. Further investigation of this small molecule in human induced pluripotent stem cells (iPS) have shown promising results for the first effective drug to manage Parkinson's disease. However, while yeast have been used extensively so far as a model organism to study human disease, majority of these disorders have a strong tissue-specific component, which may or may not have a counterpart in yeast. The extent of which these tissue-specific components are conserved in yeast has never been systematically evaluated, and the effectiveness of yeast has never been assessed. Our study not only helps in classifying human tissues/ cell-types as either compatible with yeast model or not, but also provides missing functional elements in yeast for each tissue. These functional constructs can further be utilized to engineer humanized yeast models that mimic the biology of unique human tissues, and can be used as high-throughput, tissue-specific model to study different diseases.							
+							</p>
+						</li>
+						<li>
+							<b>Identifying highly specific tissue/ cell-type markers by incorporating refined hierarchal priors</b></br>
+							<p>
+								An embryonic stem cell contains all genetic information needed to develop a new individual; it differentiates into various cell types, which group together to shape tissues, combine to constitute organs, and assemble into organ systems. Uncovering these sophisticated processes is integral to our understanding of tissue ontogenesis. Various differentiated tissues, while inheriting a similar genetic code, exhibit unique anatomical and physiological properties. These spatio-temporally differentiated characteristics are achieved through systematic control of cellular machinery at different levels, including transcriptional, translational, and post-translational regulations, in order to orchestrate tissue-specific functions and dynamic responses to environmental stimuli. Transcriptional regulation is a well-studied aspect of this control. It is manifested in the observed differences in expression levels of genes across tissues. Housekeeping genes are universally expressed in human tissues and undertake core cellular functions. In contrast, certain genes are specifically or preferentially expressed in one or a set of biologically relevant tissue types. Tissue-selective genes are highly under/over-expressed in a selected set of tissues, as compared to other tissues. Tissue-specific genes constitute a special case of tissue-selective genes, in which a target gene is significantly expressed in a single tissue type, but not in any other tissues. Interestingly, a majority of known disease genes are tissue-selective and are under/over- expressed in the specific tissue(s) where the gene defect causes pathology. To this end, tissue-selective genes play a crucial role in the physiology and the pathophysiology of human tissues. They are not only critical factors in elucidating the molecular mechanisms of normal tissues, but are also promising drug targets and candidate biomarkers. Our research imposes a refined hierarchical prior of tissue/ cell-type similarities, to identify genes that are highly specific to a given cell-type, as well as tissue-selective genes that are utilized by a group of tissues. Our method is based on iterative pruning of shared functions and identifying fuzzy clusters that exhibit similarities with respect to tissue-specific pathways at each given level.
+							</p>
+						</li>
+						<li>
+							<b>Insilico deconvolution of  mixed/contaminated profiles to identify their “purified” constituting cell types and their relative percentages</b></br>
+							<p>
+								Computational deconvolution of mixed signals, also known as blind source separation in the signal processing community, is a fundamental problem reappearing in different fields. For example, in hyperspectral imaging, it has been used to separate the spectra corresponding to different materials and image regions that are enriched them. In the clinical context, in-silico deconvolution of mixed samples have diverse applications, ranging from studying tumor micro-environment in mixed tumor/stroma biopsies from cancer patients to immune monitoring in PBMC samples. These methods allow us to capture both cell-centered and whole system level snapshot of the underlying system, and provide unique opportunity to study both intracellular and inter-cellular responses. Our unique contributions to the field of in silico deconvolution focus on bringing the academic research in the field to clinical applications. Namely, we are building novel, single-sample deconvolution methods that are capable of demixing the expression profile of a single patient. Moreover, we are constructing a comprehensive panel of purified, cell-type specific expression profiles which then can be used as a reference to deconvolute mixed samples. Finally, we are extending previous formulations to be able to separate mixed samples with wide range of constituting cell-types, which is a common case in real applications. These changes combined, greatly facilitate the future application of deconvolution methods in clinical settings.								
+							</p>
+							</li>
+					</ol>
 				</div>											
 			</div> <!-- page -->				
 		</div> <!-- container -->	

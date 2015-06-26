@@ -1,6 +1,18 @@
-h1, p {
+h1 {
+	margin:0 0 14 0;
+}
+
+p {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:18pt;
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 18pt;
+}
+
+ol {   
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size:18pt;
+    margin-left: 18pt;
 }
 
 #container {
@@ -19,7 +31,7 @@ h1, p {
     color: black;
     background-color: #eeeeee;
 	font-size:24px;
-    padding: 5px;
+    padding: 5px 0;
 	    /* background:      transparent url('header.jpg') top left no-repeat; 
 	margin: 0 auto;
     */
@@ -70,6 +82,7 @@ h1, p {
 	background: #222;
 	overflow:hidden;
 	height: 10%;
+	width: 100%;
 	padding-top: 5px;
 	padding-bottom: 15px;	
 }

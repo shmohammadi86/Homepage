@@ -6,6 +6,9 @@ for dir in `find . -type d ! -name '.'`; do
 	
 	counter=1
 	for fname in `ls $dir`; do
+		# first compress pictures so they are easier to download
+		jpegoptim $title/$fname -m50 --quiet
+
 		fullPath=images/gallery/$title/$fname
 		dims=`identify -format "%wx%h" $dir/$fname`
 		echo "						<figure itemprop=\"associatedMedia\" itemscope itemtype=\"http://schema.org/ImageObject\">"

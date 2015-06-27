@@ -1,7 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>			
+		<link href="http://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 		<script>
 		$(document).ready(function(){
 			$('#page #navigator li li a').click(function(e) {
@@ -11,6 +13,14 @@
 					$this.addClass('active');
 				}
 				e.preventDefault();
+				
+				var href=$(this).attr('href');
+				if(href[0] == '#') {
+					$("html, body").animate({ scrollTop: $(href).offset().top });
+				}
+				else {
+					window.location.href = href;
+				}
 			});
 		});
 		</script>		
@@ -60,11 +70,11 @@
 								<li><a class="active" href="#education">Education</a></li>
 								<li><a href="#awards">Awards</a></li>
 								<li><a href="#research">Research Experience</a></li>
-								<li><a href="#pub">Publications</a></li>
+								<li><a href="#publications">Publications</a></li>
 								<li><a href="#patents">Patents</a></li>
 								<li><a href="#leadership">Leadership</a></li>
 								<li><a href="#work">Work Experience</a></li>
-								<li><a href="membership.html">Professional Memberships</a></li>
+								<li><a href="#membership">Professional Memberships</a></li>
 								<li><a href="#teaching">Teaching Experience</a></li>								
 								<li><a href="pdfs/cv.pdf">Download PDF <img border="0" alt="cv.pdf" src="images/PDF.png" width=20> </a> </li>
 							</ul>												
@@ -74,7 +84,9 @@
 				
 				<div id="content" style="margin-left:25%; width:75%">
 					<h1>Curriculum vitae</h1>
-						<h2><a name="eduacation">Education</a></h2>
+						<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+					
+						<h2 id="education">Education</h2>
 							<ul style="font-size:18pt;list-style-type: none;">
 								<li> <b>Purdue University</b>
 									<ul style="font-size:14pt;list-style-type: none; padding-bottom:12pt;">
@@ -124,7 +136,7 @@
 							</ul>
 							
 						
-						<h2><a name="awards">Awards and Honors</a></h2>	
+						<h2 id="awards">Awards and Honors</h2>	
 						<ul style="font-size:14pt">
 							<li style="padding-bottom: 10pt;">Semi-finalist for the <b>Data Incubator Fellowship</b>, Oct 2014</li>
 							<li style="padding-bottom: 10pt;">Nominated for the <b>HHMI International Student Research Fellowship</b>, Purdue University, Nov 2012</li>
@@ -135,7 +147,7 @@
 							<li><b><a href="pdfs/Kharazmi_award.pdf">National Kharazmi Award</a></b> (project: IPX-based framework for cluster computing), 4th annual Kharazmi Youth Festival, Tehran, Iran</li>
 						</ul>
 						
-						<h2><a name="research">Research Experience</a></h2>
+						<h2 id="research">Research Experience</h2>
 						<ol style="font-size:14pt;">
 							<li style="padding-bottom: 10pt;"><b>Visiting Student Researcher</b>, Apr 2014–Aug 2014,
 							Andrea Goldsmith, Department of Electrical Engineering, Stanford University, Stanford, CA, USA.</li>
@@ -151,7 +163,7 @@
 						</ol>
 
 
-						<h2><a name="publications">Publications</a></h2>
+						<h2 id="publications">Publications</h2>
 						<h3 style="padding-left:14pt;">Book Chapters</h3>
 						<ol style="font-size:14pt;">
 							<b>S. Mohammadi</b> and A. Grama (2011) <a href="http://dx.doi.org/10.1007/978-1-4614-0320-3">Biological Network Alignment</a>. In M. Koyuturk, S. Subramaniam, and A. Grama (eds.), Functional Coherence of Molecular Networks in Bioinformatics, Springer, pages 97–136
@@ -203,7 +215,7 @@
 
 
 
-						<h2><a name="patents">Patents</a></h2>
+						<h2 id="patents">Patents</h2>
 						<ol style="font-size:14pt;">
 							<li><b>S. Mohammadi</b> (2005) <a href="pdfs/PNN_patent.pdf">Parallel models for implementing neural networks</a>. IR 30936</li>
 							<li><b>S. Mohammadi</b> (2004) <a href="pdfs/scheduling_patent.pdf">A self-adaptive scheduling algorithm for dynamic networks</a>. IR 29574</li>
@@ -211,7 +223,7 @@
 						</ol>
 
 						
-						<h2><a name="leadership">Leadership</a></h2>
+						<h2 id="leadership">Leadership</h2>
 						<ol style="font-size:14pt;">
 							<li style="padding-bottom: 10pt;"><b>Founder and President</b>, <a href="http://rsg-greatlakes.iscbsc.org">Great Lakes Regional Student Group (RSG)</a>, International Society
 							for Computational Biology (ISCB), Feb 2014-Present</li>
@@ -225,7 +237,7 @@
 						</ol>						
 
 
-						<h2><a name="work">Work Experience</a></h2>
+						<h2 id="work">Work Experience</h2>
 						<ol style="font-size:14pt;">
 							<li><b>Research Associate Intern</b>, Genapsys Inc., Redwood City, CA, USA. May 2014-Aug 2014. Responsibilities:
 								<ul style="font-size:12pt;list-style-type: disc; padding-bottom:10pt;">
@@ -248,13 +260,13 @@
 						</ol>						
 
 						
-						<h2><a name="membership">Professional Memberships</a></h2>
+						<h2 id="membership">Professional Memberships</h2>
 						<ul style="font-size:14pt;list-style-type: disc;">
 							<li style="padding-bottom: 10pt;">International Society for Computational Biology (<b><a href="http://www.iscb.org">ISCB</a></b>)</li>
 							<li>American Association for the Advancement of Science (<b><a href="http://www.aaas.org">AAAS</a></b>)</li>
 						</ul>
 						
-						<h2><a name="teaching">Teaching Experience</a></h2>
+						<h2 id="teaching">Teaching Experience</h2>
 						<ol style="font-size:14pt;">
 							<li><b>Teacher</b>, Allameh Helli High School, Tehran, Iran
 								<ul style="font-size:12pt;list-style-type: disc; padding-bottom:10pt;">

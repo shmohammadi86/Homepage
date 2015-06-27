@@ -1,5 +1,16 @@
 h1 {
 	padding: 0pt 0pt 0pt 0pt;
+	font-size:24pt;
+}
+
+h2 {
+	padding: 0pt 0pt 0pt 0pt;
+	font-size:20pt;
+}
+
+h3 {
+	padding: 0pt 0pt 0pt 0pt;
+	font-size:16pt;
 }
 
 p {
